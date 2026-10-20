@@ -25,7 +25,7 @@ const filterListings = (
   });
 };
 
-export default function HomeBrowser() {
+const HomeBrowser = () => {
   const [allListings, setAllListings] = useState<Accommodation[]>([]);
   const [listings, setListings] = useState<Accommodation[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -77,4 +77,5 @@ export default function HomeBrowser() {
       </main>
     </>
   );
-}
+};
+export default HomeBrowser;

@@ -5,7 +5,7 @@ const services = [
   { icon: "🏋️", label: "Entrenamiento" },
 ];
 
-export default function HomeServices() {
+const HomeServices = () => {
   return (
     <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <h2 className="text-xl font-semibold sm:text-2xl">
@@ -21,4 +21,6 @@ export default function HomeServices() {
       </div>
     </section>
   );
-}
+};
+
+export default HomeServices;

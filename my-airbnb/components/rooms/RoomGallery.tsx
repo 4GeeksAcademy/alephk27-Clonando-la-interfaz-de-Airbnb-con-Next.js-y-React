@@ -8,7 +8,7 @@ interface RoomGalleryProps {
   photos: string[];
 }
 
-export default function RoomGallery({ title, photos }: RoomGalleryProps) {
+const RoomGallery = ({ title, photos }: RoomGalleryProps) => {
   const [activePhoto, setActivePhoto] = useState(0);
   const showPhoto = (offset: number) => {
     setActivePhoto((index) => (index + offset + photos.length) % photos.length);
@@ -53,4 +53,6 @@ export default function RoomGallery({ title, photos }: RoomGalleryProps) {
       </div>
     </section>
   );
-}
+};
+
+export default RoomGallery;

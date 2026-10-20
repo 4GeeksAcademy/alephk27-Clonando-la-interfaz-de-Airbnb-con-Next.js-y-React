@@ -4,7 +4,7 @@ interface RoomHostInfoProps {
   host: Host;
 }
 
-export default function RoomHostInfo({ host }: RoomHostInfoProps) {
+const RoomHostInfo = ({ host }: RoomHostInfoProps) => {
   return (
     <section className="flex items-center gap-4 border-b border-neutral-200 pb-6">
       {host.avatarUrl ? (
@@ -30,4 +30,6 @@ export default function RoomHostInfo({ host }: RoomHostInfoProps) {
       </div>
     </section>
   );
-}
+};
+
+export default RoomHostInfo;

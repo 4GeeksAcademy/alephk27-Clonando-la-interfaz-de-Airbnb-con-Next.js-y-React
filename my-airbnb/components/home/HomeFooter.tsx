@@ -13,7 +13,7 @@ const footerGroups = [
   },
 ];
 
-export default function HomeFooter() {
+const HomeFooter = () => {
   return (
     <footer className="bg-neutral-50">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:grid-cols-3 sm:px-6 lg:px-8">
@@ -38,4 +38,6 @@ export default function HomeFooter() {
       </div>
     </footer>
   );
-}
+};
+
+export default HomeFooter;

@@ -1,5 +1,7 @@
 import CatalogBrowser from "@/components/catalog/CatalogBrowser";
 
-export default function CatalogPage() {
+const CatalogPage = () => {
   return <CatalogBrowser />;
-}
+};
+
+export default CatalogPage;

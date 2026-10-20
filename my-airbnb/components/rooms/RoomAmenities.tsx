@@ -4,7 +4,7 @@ interface RoomAmenitiesProps {
 
 const amenityIcons = ["⌁", "♨", "❄", "⌖"];
 
-export default function RoomAmenities({ amenities }: RoomAmenitiesProps) {
+const RoomAmenities = ({ amenities }: RoomAmenitiesProps) => {
   return (
     <section className="py-6">
       <h2 className="text-xl font-semibold">Lo que ofrece este alojamiento</h2>
@@ -20,4 +20,6 @@ export default function RoomAmenities({ amenities }: RoomAmenitiesProps) {
       </ul>
     </section>
   );
-}
+};
+
+export default RoomAmenities;

@@ -7,10 +7,10 @@ interface RoomBookingCardProps {
   maxGuests: number;
 }
 
-export default function RoomBookingCard({
+const RoomBookingCard = ({
   pricePerNight,
   maxGuests,
-}: RoomBookingCardProps) {
+}: RoomBookingCardProps) => {
   const [guests, setGuests] = useState(1);
 
   return (
@@ -57,4 +57,6 @@ export default function RoomBookingCard({
       </button>
     </aside>
   );
-}
+};
+
+export default RoomBookingCard;

@@ -9,7 +9,7 @@ interface ListingCardProps {
   listing: Accommodation;
 }
 
-export default function ListingCard({ listing }: ListingCardProps) {
+const ListingCard = ({ listing }: ListingCardProps) => {
   const [isSaved, setIsSaved] = useState(false);
 
   return (
@@ -17,7 +17,7 @@ export default function ListingCard({ listing }: ListingCardProps) {
       <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-100">
         <Link
           aria-label={`Ver ${listing.title}, en ${listing.location}`}
-          className="absolute inset-0"
+          className="absolute inset-0 block"
           href={`/rooms/${listing.id}`}
         >
           <Image
@@ -66,4 +66,6 @@ export default function ListingCard({ listing }: ListingCardProps) {
       </Link>
     </article>
   );
-}
+};
+
+export default ListingCard;

@@ -6,11 +6,11 @@ interface HomeSearchBarProps {
   onValueChange: (value: string) => void;
 }
 
-export default function HomeSearchBar({
+const HomeSearchBar = ({
   disabled,
   value,
   onValueChange,
-}: HomeSearchBarProps) {
+}: HomeSearchBarProps) => {
   return (
     <div className="flex min-h-16 items-center justify-between gap-3 py-3">
       <Link
@@ -70,4 +70,6 @@ export default function HomeSearchBar({
       </button>
     </div>
   );
-}
+};
+
+export default HomeSearchBar;

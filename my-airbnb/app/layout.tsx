@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "Explora alojamientos únicos para tu próximo viaje.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+const RootLayout = ({ children }: LayoutProps<"/">) => {
   return (
     <html
       lang="es"
@@ -28,4 +28,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

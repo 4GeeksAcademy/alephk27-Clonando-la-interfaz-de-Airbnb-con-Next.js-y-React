@@ -4,7 +4,7 @@ import HomeInspiration from "@/components/home/HomeInspiration";
 import HomeServices from "@/components/home/HomeServices";
 import MobileTabBar from "@/components/home/MobileTabBar";
 
-export default function Home() {
+const Home = () => {
   return (
     <div id="home" className="min-h-screen bg-white text-neutral-900">
       <HomeBrowser />
@@ -14,4 +14,6 @@ export default function Home() {
       <MobileTabBar />
     </div>
   );
-}
+};
+
+export default Home;

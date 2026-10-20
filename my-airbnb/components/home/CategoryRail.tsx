@@ -14,11 +14,11 @@ interface CategoryRailProps {
   onSelect: (category: string) => void;
 }
 
-export default function CategoryRail({
+const CategoryRail = ({
   activeCategory,
   disabled,
   onSelect,
-}: CategoryRailProps) {
+}: CategoryRailProps) => {
   return (
     <nav aria-label="Filtrar alojamientos por categoría" className="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
       <ul className="flex min-w-max items-stretch gap-7">
@@ -49,4 +49,6 @@ export default function CategoryRail({
       </ul>
     </nav>
   );
-}
+};
+
+export default CategoryRail;

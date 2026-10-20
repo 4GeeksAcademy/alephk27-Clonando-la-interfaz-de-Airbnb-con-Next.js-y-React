@@ -1,32 +1,17 @@
-import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import RoomDetails from "@/components/rooms/RoomDetails";
-import { accommodations } from "@/data/accommodations";
+import RoomRoute from "@/components/rooms/RoomRoute";
+import RoomLoadingState from "@/components/rooms/RoomLoadingState";
 
 interface RoomPageProps {
   params: Promise<{ id: string }>;
 }
 
-export default function RoomPage({ params }: RoomPageProps) {
+const RoomPage = ({ params }: RoomPageProps) => {
   return (
-    <Suspense
-      fallback={
-        <main className="mx-auto min-h-screen w-full max-w-5xl px-4 py-8 sm:px-6">
-          Cargando alojamiento...
-        </main>
-      }
-    >
+    <Suspense fallback={<RoomLoadingState />}>
       <RoomRoute params={params} />
     </Suspense>
   );
-}
-
-const RoomRoute = async ({ params }: RoomPageProps) => {
-  const { id } = await params;
-
-  if (!accommodations.some((accommodation) => accommodation.id === id)) {
-    notFound();
-  }
-
-  return <RoomDetails id={id} />;
 };
+
+export default RoomPage;

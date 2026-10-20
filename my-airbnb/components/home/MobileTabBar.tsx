@@ -6,7 +6,7 @@ const tabs = [
   { label: "Iniciar sesión", icon: "◎", active: false, href: "#home" },
 ];
 
-export default function MobileTabBar() {
+const MobileTabBar = () => {
   return (
     <nav
       aria-label="Navegación móvil"
@@ -32,4 +32,6 @@ export default function MobileTabBar() {
       </ul>
     </nav>
   );
-}
+};
+
+export default MobileTabBar;

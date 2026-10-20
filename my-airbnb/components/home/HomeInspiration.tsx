@@ -7,7 +7,7 @@ const destinations = [
   ["Filadelfia", "Departamentos"],
 ];
 
-export default function HomeInspiration() {
+const HomeInspiration = () => {
   return (
     <section id="inspiration" className="bg-neutral-50">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
@@ -29,4 +29,6 @@ export default function HomeInspiration() {
       </div>
     </section>
   );
-}
+};
+
+export default HomeInspiration;

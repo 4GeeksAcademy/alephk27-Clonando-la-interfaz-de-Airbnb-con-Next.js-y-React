@@ -8,11 +8,11 @@ interface ListingGridProps {
   hasFilters: boolean;
 }
 
-export default function ListingGrid({
+const ListingGrid = ({
   listings,
   isLoading,
   hasFilters,
-}: ListingGridProps) {
+}: ListingGridProps) => {
   if (isLoading) {
     return (
       <div aria-label="Cargando alojamientos" aria-live="polite" className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -66,4 +66,6 @@ export default function ListingGrid({
       )}
     </section>
   );
-}
+};
+
+export default ListingGrid;
