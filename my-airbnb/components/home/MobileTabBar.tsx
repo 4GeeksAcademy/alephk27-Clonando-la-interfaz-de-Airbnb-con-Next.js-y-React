@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const tabs = [
   { label: "Explorar", icon: "⌕", active: true, href: "#home" },
   { label: "Favoritos", icon: "♡", active: false, href: "#home" },
@@ -13,7 +15,7 @@ export default function MobileTabBar() {
       <ul className="mx-auto flex max-w-sm items-center justify-around">
         {tabs.map((tab) => (
           <li key={tab.label}>
-            <a
+            <Link
               aria-current={tab.active ? "page" : undefined}
               className={`flex min-w-16 flex-col items-center gap-1 text-[10px] ${
                 tab.active ? "text-rose-600" : "text-neutral-500"
@@ -24,7 +26,7 @@ export default function MobileTabBar() {
                 {tab.icon}
               </span>
               {tab.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

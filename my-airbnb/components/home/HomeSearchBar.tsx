@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface HomeSearchBarProps {
   disabled: boolean;
   value: string;
@@ -11,14 +13,14 @@ export default function HomeSearchBar({
 }: HomeSearchBarProps) {
   return (
     <div className="flex min-h-16 items-center justify-between gap-3 py-3">
-      <a
+      <Link
         aria-label="Airbnb, inicio"
         className="hidden shrink-0 items-center gap-2 text-rose-600 md:flex"
-        href="#home"
+        href="/"
       >
         <span aria-hidden="true" className="text-3xl leading-none">⌂</span>
         <span className="text-xl font-bold">airbnb</span>
-      </a>
+      </Link>
       <form
         className="flex h-12 min-w-0 flex-1 items-center rounded-full border border-neutral-200 bg-white px-4 shadow-sm transition hover:shadow-md sm:h-14 sm:px-5 md:max-w-lg"
         onSubmit={(event) => event.preventDefault()}

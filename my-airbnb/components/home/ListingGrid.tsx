@@ -1,5 +1,6 @@
 import type { Accommodation } from "@/types/accommodation";
 import ListingCard from "@/components/home/ListingCard";
+import Link from "next/link";
 
 interface ListingGridProps {
   listings: Accommodation[];
@@ -36,6 +37,12 @@ export default function ListingGrid({
           <h1 className="mt-1 text-xl font-semibold sm:text-2xl">
             Alojamientos para tu próxima escapada
           </h1>
+          <Link
+            className="mt-2 inline-block text-sm font-semibold text-rose-600 underline-offset-4 hover:underline"
+            href="/catalog"
+          >
+            Ver todos los alojamientos
+          </Link>
         </div>
         <p className="shrink-0 text-sm text-neutral-500">
           {listings.length} {listings.length === 1 ? "opción" : "opciones"}
